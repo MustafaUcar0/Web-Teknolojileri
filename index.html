@@ -1,25 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS</title>
-<link rel="stylesheet" href="./style.css">
-
-
+    <title>Hakkımda - Kişisel Web Sitem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body></body>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Benim Şehrim</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Giriş</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<!--Satır içi Css
-    <h3 style="font-size: 45px;">Mustafa Uçar</h3>
-    <h3 style="background-color: blue;">Mustafa Uçar</h3>-->
+    <main class="container my-5">
+        <section class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="profil.jpg" alt="Profil Resmi" class="img-fluid rounded-circle shadow-lg mb-3">
+            </div>
+            <div class="col-md-8">
+                <h1 class="display-4">Merhaba, Ben Mustafa Uçar</h1>
+                <p class="lead">Masa tenisi tutkunu ve gezmeyi seven bir bilgisayar mühendisliği öğrencisiyim.</p>
+            </div>
+        </section>
 
-<!--Head Tag Css-->
+        <!-- Güncellenmiş Hobiler Bölümü -->
+        <section class="row mt-5">
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="masa-tenisi.jpg" class="card-img-top" alt="Masa Tenisi">
+                    <div class="card-body">
+                        <h3 class="card-title">Masa Tenisi</h3>
+                        <p class="card-text">
+                            Haftada 3 gün yerel spor kulübünde antrenman yapıyorum. 
+                            <span class="text-muted">#TurnuvaHazırlıkları</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="gezi.jpg" class="card-img-top" alt="Gezmek">
+                    <div class="card-body">
+                        <h3 class="card-title">Şehir Keşifleri</h3>
+                        <p class="card-text">
+                            Her ay yeni bir tarihi mekan keşfediyorum. 
+                            <a href="sehir.html" class="stretched-link">Şehir rehberim</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!--<h3>Fatih Sultan Mehmet</h3>
-<div>Fatih Sultan Mehmet</div>-->
-<h4>Mustafa Uçar</h4>
-    <h2>Fatih</h2>
-    <div>Merhaba Css Web Sitesi.</div>
+        <!-- Güncellenmiş Eğitim Bilgisi -->
+        <section class="mt-5">
+            <h2 class="mb-4">Eğitim Geçmişim</h2>
+            <div class="list-group">
+                <div class="list-group-item">
+                    <h5>Sakarya Üniversitesi</h5>
+                    <p>Bilgisayar Mühendisliği - 2023-2028</p>
+                    <small class="text-muted">(Çift Anadal Programı ile)</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Tüm hakları saklıdır</p>
+            <p class="mb-0">İletişim: <a href="mailto:ornek@domain.com" class="text-white">ornek@domain.com</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
