@@ -10,8 +10,114 @@ body {
 
 .card {
     transition: transform 0.3s;
+}/* Özel Stiller */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', sans-serif;
 }
 
+.navbar {
+    border-bottom: 3px solid #17a2b8;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.list-group-item {
+    border: none;
+    background-color: rgba(0,0,0,0.03);
+}
+/* Timeline Stili */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    border-left: 3px solid #0d6efd;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: #0d6efd;
+    border-radius: 50%;
+}
+
+/* Kart Hover Efekti */
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+/* Slider Yazı Kontrastı */
+.carousel-caption {
+    border-radius: 15px;
+    padding: 1rem !important;
+}
+
+/* Kart Geçiş Efekti */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Detay Kartları */
+article h4 {
+    color: #6f42c1; /* Lavanta rengi */
+    border-left: 4px solid #6f42c1;
+    padding-left: 1rem;
+}
+/* Slider Yazı Kontrastı */
+.carousel-caption {
+    border-radius: 15px;
+    padding: 1rem !important;
+}
+
+/* Kart Geçiş Efekti */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Detay Kartları */
+article h4 {
+    color: #6f42c1; /* Lavanta rengi */
+    border-left: 4px solid #6f42c1;
+    padding-left: 1rem;
+}
+/* Tüm Görseller İçin Ortak Stil */
+.resim-boyutu {
+    width: 100%;
+    height: 400px; /* Sabit yükseklik */
+    object-fit: cover; /* Oranları bozmadan kırpar */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Mobil için Yükseklik Ayarı */
+@media (max-width: 768px) {
+    .resim-boyutu {
+        height: 250px;
+    }
+}
 .card:hover {
     transform: translateY(-5px);
 }

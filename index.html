@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hakkımda - Kişisel Web Sitem</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigasyon Aynı -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">Benim Şehrim</a>
@@ -27,17 +29,21 @@
     </nav>
 
     <main class="container my-5">
+        <!-- Profil ve Diğer İçerik Aynı -->
         <section class="row align-items-center">
             <div class="col-md-4 text-center">
-                <img src="profil.jpg" alt="Profil Resmi" class="img-fluid rounded-circle shadow-lg mb-3">
+                <img src="profil.jpg" alt="Profil Resmi" 
+                     class="img-fluid rounded-circle shadow-lg mb-3 custom-profile-size">
             </div>
             <div class="col-md-8">
                 <h1 class="display-4">Merhaba, Ben Mustafa Uçar</h1>
-                <p class="lead">Masa tenisi tutkunu ve gezmeyi seven bir bilgisayar mühendisliği öğrencisiyim.</p>
+                <p class="lead">Masa tenisi tutkunu ve gezmeyi seven bir bilgisayar mühendisliği öğrencisiyim. 
+                    Sakarya Üniversitesi Bilgisayar Mühendisliği 1. sınıf öğrencisiyim. Ayrıca milli masa tenisi sporcusuyum. </p>
+
             </div>
         </section>
 
-        <!-- Güncellenmiş Hobiler Bölümü -->
+        <!-- Güncellenen Şehir Keşifleri Slider -->
         <section class="row mt-5">
             <div class="col-lg-6 mb-4">
                 <div class="card h-100 shadow">
@@ -52,21 +58,52 @@
                 </div>
             </div>
             
+            <!-- Slider Eklendi -->
             <div class="col-lg-6 mb-4">
-                <div class="card h-100 shadow">
-                    <img src="gezi.jpg" class="card-img-top" alt="Gezmek">
-                    <div class="card-body">
-                        <h3 class="card-title">Şehir Keşifleri</h3>
-                        <p class="card-text">
-                            Her ay yeni bir tarihi mekan keşfediyorum. 
-                            <a href="sehir.html" class="stretched-link">Şehir rehberim</a>
-                        </p>
+                <div id="geziSlider" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="gezi1.jpg" class="d-block w-100 slider-image" alt="İsveç Maçı">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75">
+                                <h5>Macaristan Turnuvası</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="gezi2.jpg" class="d-block w-100 slider-image" alt="Makedonya Maçı">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75">
+                                <h5>Jon O Waldner'le Tanışma</h5>
+                                <p>İsveçli efsane masa tenisi oyuncusu</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="gezi3.jpg" class="d-block w-100 slider-image" alt="Şehir Turu">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75">
+                                <h5>Yerel Keşifler İsveç Stokholm</h5>
+                            </div>
+                        </div>
+                         <div class="carousel-item">
+                            <img src="gezi4.jpg" class="d-block w-100 slider-image" alt="Macaristan Maçı">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75">
+                                <h5>Yerel Keşifler Budapeşte</h5>
+                            </div>
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#geziSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#geziSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+                <div class="card-body mt-3">
+                    <h3>Şehir Keşifleri</h3>
+                    <p class="card-text">
+                        Düzenli maçlara gittiğim için bir sürü şehir gezme fırsatım oldu.  </p>
                 </div>
             </div>
         </section>
 
-        <!-- Güncellenmiş Eğitim Bilgisi -->
+        <!-- Eğitim Bilgileri Aynı -->
         <section class="mt-5">
             <h2 class="mb-4">Eğitim Geçmişim</h2>
             <div class="list-group">
@@ -79,10 +116,18 @@
         </section>
     </main>
 
+    <!-- Footer Aynı -->
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container text-center">
+            <div class="social-links mb-3">
+                <a href="https://www.instagram.com/kullaniciadiniz/" 
+                   target="_blank" 
+                   class="text-white me-3">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
             <p class="mb-0">&copy; 2024 Tüm hakları saklıdır</p>
-            <p class="mb-0">İletişim: <a href="mailto:ornek@domain.com" class="text-white">ornek@domain.com</a></p>
+            <p class="mb-0">İletişim: <a href="mailto:mfbmucar@gmail.com" class="text-white">mfbmucar@gmail.com</a></p>
         </div>
     </footer>
 
