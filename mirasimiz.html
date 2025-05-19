@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirasımız - Isparta MTK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Özel Miras Sayfası Stilleri */
+        .miras-body {
+            background: linear-gradient(135deg, #ffe6f0 0%, #f0f0f0 100%);
+            min-height: 100vh;
+        }
+        
+        .miras-kart {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ff69b4;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .miras-kart:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255,105,180,0.2);
+        }
+
+        .baslik-pembe {
+            color: #ff69b4;
+            border-bottom: 3px solid #ff69b4;
+            padding-bottom: 0.5rem;
+        }
+
+        .timeline-pembe .timeline-item::before {
+            background: #ff69b4;
+        }
+
+        .istatistik-kutusu {
+            background: #ff69b4;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="miras-body">
+    
+    <!-- Navbar (Tüm Sayfalarla Aynı) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mustafa Uçar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link " href="cv.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="mirasimiz.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Giriş</a></li>
+                    <li class="nav-item"><a class="nav-link " href="ılgıalanlarım.html">İlgi Alanlarım</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container py-5">
+        <!-- Kulüp Tanıtım -->
+        <section class="mb-5 miras-kart p-4">
+            <h2 class="baslik-pembe mb-4">Isparta Masa Tenisi Kulübü</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="takim-foto.jpg" class="img-fluid rounded-3" alt="Takım Fotoğrafı">
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                    <p class="lead">2016 yılında kurulan kulübümüz, pembe-gri renkleriyle disiplin ve tutkuyu temsil eder. Genç yetenekleri keşfedip dünya standartlarında sporcular yetiştiriyor.</p>
+                </div>
+                <a href="https://www.instagram.com/ispartes_ttc/?__pwa=1" 
+           class="instagram-box" 
+           target="_blank">
+            <div class="text-center">
+                <i class="fab fa-instagram instagram-icon"></i>
+                <h3 class="d-inline-block align-middle">
+                    Bizi Instagram'dan Takip Edin!
+                    Ispartes.ttc
+                </h3>
+            </div>
+        </a>
+            </div>
+        </section>
+
+<section class="mb-5">
+            <h2 class="baslik-pembe mb-4">🎥 Kulüp Videoları</h2>
+           <div class="video-container">
+    <iframe 
+        src="https://www.youtube.com/embed/adA8DVmLg0I" 
+        title="Isparta Masa Tenisi Kulübü Tanıtım Videosu"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+       <iframe 
+        src="https://www.youtube.com/embed/GVzVyu3cDyU?start=1" 
+        title="Isparta Masa Tenisi Maç Görüntüleri"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <iframe 
+        src="https://www.youtube.com/embed/j9sMTveEPiM" 
+        title="Isparta Masa Tenisi Maç Görüntüleri"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe><iframe 
+        src="https://www.youtube.com/embed/BWlGDrhoge4" 
+        title="Isparta Masa Tenisi Maç Görüntüleri"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+        </section>
+
+        <!-- Başarılar -->
+        <section class="mb-5 miras-kart p-4">
+            <h2 class="baslik-pembe mb-4">🏆 Önemli Başarılar</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="istatistik-kutusu p-3 text-center">
+                        <h3>5</h3>
+                        <p>Uluslararası Madalya</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="istatistik-kutusu p-3 text-center">
+                        <h3>15+</h3>
+                        <p>Milli Sporcu</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Zaman Çizelgesi -->
+            <div class="mt-4 timeline-pembe">
+                <div class="timeline-item">
+                    <h4>2017</h4>
+                    <p>İlk Türkiye Şampiyonluğu</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2019</h4>
+                    <p>Avrupa Gençler Turnuvası 3.lüğü</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>2022</h4>
+                    <p>Süper Lig'e Yükseliş</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <div class="social-links mb-3">
+                <a href="https://www.instagram.com/ispartes_ttc/?__pwa=1" 
+                   target="_blank" 
+                   class="text-white me-3">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
+            <p class="mb-0">&copy; 2024 Tüm hakları saklıdır</p>
+            <p class="mb-0">İletişim: <a href="mailto:mfbmucar@gmail.com" class="text-white">mfbmucar@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

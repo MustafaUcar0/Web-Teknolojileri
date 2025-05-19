@@ -17,7 +17,7 @@ body {
 }
 
 .navbar {
-    border-bottom: 3px solid #17a2b8;
+    border-bottom: 3px solid #008895;
 }
 
 .card {
@@ -30,7 +30,7 @@ body {
 
 .list-group-item {
     border: none;
-    background-color: rgba(0,0,0,0.03);
+    background-color: rgba(242, 0, 255, 0.953);
 }
 /* Timeline Stili */
 .timeline {
@@ -73,7 +73,7 @@ body {
 }
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgb(255, 0, 0);
 }
 
 /* Detay Kartları */
@@ -88,14 +88,7 @@ article h4 {
     padding: 1rem !important;
 }
 
-/* Kart Geçiş Efekti */
-.card {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
+
 
 /* Detay Kartları */
 article h4 {
@@ -155,20 +148,9 @@ article h4 {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
 }
-/* Slider Yazı Kontrastı */
-.carousel-caption {
-    border-radius: 15px;
-    padding: 1rem !important;
-}
 
-/* Kart Geçiş Efekti */
-.card {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
+
+
 
 /* Detay Kartları */
 article h4 {
@@ -188,7 +170,7 @@ article h4 {
 }
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.926);
 }
 
 /* Detay Kartları */
@@ -211,4 +193,5 @@ article h4 {
     .resim-boyutu {
         height: 250px;
     }
-}
+} 
+
