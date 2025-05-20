@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Sonucu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1607532941433-09a3f57676c8');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .card-container {
+      background-color: rgba(255,255,255,0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mustafa Uçar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active " href="index.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link " href="cv.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link " href="mirasimiz.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Giriş</a></li>
+                    <li class="nav-item"><a class="nav-link  " href="ılgıalanlarım.html">İlgi Alanlarım</a></li>
+                     <li class="nav-item"><a class="nav-link   " href="iletisim.html">İletişim</a></li>
+                      <li class="nav-item"><a class="nav-link active " href="form-sonuc.html">Form-Sonuç</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <div class="container my-5">
+    <div class="card-container">
+      <h2 class="text-center mb-4">Form Bilgileri</h2>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const get = key => params.get(key) || 'Yok';
+    document.getElementById('result').innerHTML = `
+      <p><strong>Ad Soyad:</strong> ${get('name')}</p>
+      <p><strong>E-posta:</strong> ${get('email')}</p>
+      <p><strong>Telefon:</strong> ${get('phone')}</p>
+      <p><strong>Cinsiyet:</strong> ${get('gender')}</p>
+      <p><strong>Şehir:</strong> ${get('city')}</p>
+      <p><strong>Mesaj:</strong> ${get('message')}</p>
+      <p><strong>Kabul Durumu:</strong> ${get('agree') === 'true' ? 'Kabul edildi' : 'Edilmedi'}</p>
+    `;
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İletişim Formu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.4.0/dist/vue.global.prod.js"></script>
+
+  <style>
+  body {
+   
+    background-image: url('masa-tenisi.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+     backdrop-filter: blur(5px);
+ 
+
+
+
+  }
+
+  .form-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  
+
+</style>
+
+</head>
+<body>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Mustafa Uçar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link  " href="index.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link " href="cv.html">Özgeçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link " href="mirasimiz.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Giriş</a></li>
+                    <li class="nav-item"><a class="nav-link  " href="ılgıalanlarım.html">İlgi Alanlarım</a></li>
+                     <li class="nav-item"><a class="nav-link   active " href="iletisim.html">İletişim</a></li>
+                      <li class="nav-item"><a class="nav-link  " href="form-sonuc.html">Form-Sonuç</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <div id="app" class="container my-5">
+    <div class="form-container">
+      <h2 class="text-center mb-4">İletişim Formu</h2>
+
+      <form @submit.prevent="submitForm" novalidate>
+        <div class="mb-3">
+          <label class="form-label">Ad Soyad</label>
+          <input type="text" class="form-control" v-model="form.name">
+          <div class="text-danger" v-if="errors.name">Ad soyad giriniz</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">E-posta</label>
+          <input type="text" class="form-control" v-model="form.email">
+          <div class="text-danger" v-if="errors.email">Geçerli e-posta giriniz</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Telefon</label>
+          <input type="text" class="form-control" v-model="form.phone">
+          <div class="text-danger" v-if="errors.phone">Telefon sadece rakam içermelidir</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Cinsiyet</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" value="Erkek" v-model="form.gender">
+            <label class="form-check-label">Erkek</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" value="Kadın" v-model="form.gender">
+            <label class="form-check-label">Kadın</label>
+          </div>
+          <div class="text-danger" v-if="errors.gender">Cinsiyet seçiniz</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Şehir</label>
+          <select class="form-select" v-model="form.city">
+            <option value="">Seçiniz</option>
+            <option>İstanbul</option>
+            <option>Ankara</option>
+            <option>İzmir</option>
+            <option>Bursa</option>
+          </select>
+          <div class="text-danger" v-if="errors.city">Şehir seçiniz</div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Mesajınız</label>
+          <textarea class="form-control" rows="4" v-model="form.message"></textarea>
+          <div class="text-danger" v-if="errors.message">Mesaj boş olamaz</div>
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" v-model="form.agree">
+          <label class="form-check-label">Kuralları kabul ediyorum</label>
+          <div class="text-danger" v-if="errors.agree">Onay kutusu zorunlu</div>
+        </div>
+
+        <div class="d-flex gap-3">
+          <button type="submit" class="btn btn-success">Gönder</button>
+          <button type="button" class="btn btn-warning" @click="clearForm">Temizle</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          form: {
+            name: '',
+            email: '',
+            phone: '',
+            gender: '',
+            city: '',
+            message: '',
+            agree: false
+          },
+          errors: {}
+        };
+      },
+      methods: {
+        validateForm() {
+          this.errors = {};
+          if (!this.form.name) this.errors.name = true;
+          if (!this.form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) this.errors.email = true;
+          if (!this.form.phone || !/^\d+$/.test(this.form.phone)) this.errors.phone = true;
+          if (!this.form.gender) this.errors.gender = true;
+          if (!this.form.city) this.errors.city = true;
+          if (!this.form.message) this.errors.message = true;
+          if (!this.form.agree) this.errors.agree = true;
+
+          return Object.keys(this.errors).length === 0;
+        },
+        submitForm() {
+          if (this.validateForm()) {
+            const query = new URLSearchParams(this.form).toString();
+            window.location.href = `form-sonuc.html?${query}`;
+          }
+        },
+        clearForm() {
+          this.form = {
+            name: '',
+            email: '',
+            phone: '',
+            gender: '',
+            city: '',
+            message: '',
+            agree: false
+          };
+          this.errors = {};
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
